@@ -1,0 +1,423 @@
+/*
+==========
+Start GLOBAL STYLES
+==========
+*/
+
+/* Start remove all default margins and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Highly recommended for layout accuracy */
+}
+/* End remove all default margins and padding */
+
+/* Start body background color and font family*/
+body {
+  background-color: #f1f1f1;
+  font-family: "Raleway", sans-serif;
+  line-height: 1.5;
+}
+/* End body background colorand font family */
+
+
+/* Start heading 1 font size*/
+h1 {
+  margin: 0px; /* makes space around h1 0px */
+  color: #333333;
+  font-size: 30px;
+}
+/* End heading 1 font size*/
+
+
+/* Start heading 2 font size and margin */
+h2 {
+  font-size: 20px;
+  color: #333333;
+  margin-bottom: 0;
+}
+/* End heading 2 font size and margin */
+
+
+/* Start styles for paragraph text*/
+p {
+  color: #333333;
+  font-size: 16px;
+  line-height: 2;
+}
+/* End styles for paragraph text*/
+
+
+/* Start Link styles */
+a {
+  text-decoration: none;
+}
+/* End Link styles */
+
+
+.footer-words {
+  color: #fcfcfc; /* Changes the link color to orange */
+}
+
+
+
+
+/* Start forces every image to stretch the full width of its parent container and forces it to start on a new line*/
+img {
+  width: 100%;
+  display: block;
+}
+/* End forces every image to stretch the full width of its parent container and forces it to start on a new line*/
+
+/*
+==========
+END GLOBAL STYLES
+==========
+*/
+
+ /*
+==========
+Start Variables
+==========
+*/
+:root {
+  --primaryColor:#008CBA;
+  --authenticTeal:#035352;
+  --sidecarYellow:#f3e8bb;
+  --softGrey:#39464b;
+  --charCoal:#343837;
+  --mainBlack:#222;
+  --mainWhite:#fff;
+  --offwhite:#f7f7f7;
+  --darkGrey:#afafaf;
+  --mainTransition:all 0.3s linear;
+  --mainSpacing:2px;
+}
+/*
+==========
+End Variables
+==========
+*/
+
+
+/* Base Layout (Mobile First) */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr; /* Stacks to a single column on small screens */
+  gap: 20px; /* Provides consistent spacing between items */
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+}
+
+/* Responsive Desktop Layout */
+@media (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 2fr 1fr; /* Activates the asymmetric two-column split */
+        padding-left: 0;
+      padding-right: 0;
+  }
+}
+
+
+/* Optional Styling for Visualization */
+.main-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr auto;
+  margin-bottom: 20px; /* Creates space below the first grid */
+}
+
+
+.sidebar {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16); 
+  display: grid;                     /* makes this column into a grid */
+  grid-template-columns: 1fr;        /* makes this 1 column */
+  grid-template-rows: auto 1fr auto; /* image is auto info in midle is stretched and footer is at bottom */
+  margin-bottom: 20px; /* Creates space below the first grid */
+}
+
+/* Start style for ul list on right side of page sidebar */
+.side-bar-list-item {
+    list-style: none; 
+    border: 1px solid #d8d8d8; /* Sets width, line style, and color */
+    padding: 10px;             /* Adds space between text and the border */
+    margin-bottom: 0px;        /* Adds space between separate list items */ 
+    text-align: center;
+    border-top: none;
+}
+
+.side-bar-list-item-left {
+    list-style: none; 
+    border: 1px solid #d8d8d8; /* Sets width, line style, and color */
+    padding: 10px;             /* Adds space between text and the border */
+    margin-bottom: 0px;        /* Adds space between separate list items */ 
+    text-align: left;
+    border-top: none;
+}
+
+.side-bar-list-item-top-line {   /* this very top of the ul list so it has a bar at top for sidbar is list on right side of page in sidebar  */
+    list-style: none; 
+    border: 1px solid #d8d8d8; /* Sets width, line style, and color */
+    padding: 10px;             /* Adds space between text and the border */
+    margin-bottom: 0px;        /* Adds space between separate list items */ 
+    border-top: 1px solid #d8d8d8;
+    text-align: center;
+}
+
+.side-bar-list-item-top-line-left {   /* this very top of the ul list so it has a bar at top for sidbar is list on right side of page in sidebar  */
+    list-style: none; 
+    border: 1px solid #d8d8d8; /* Sets width, line style, and color */
+    padding: 10px;             /* Adds space between text and the border */
+    margin-bottom: 0px;        /* Adds space between separate list items */ 
+    border-top: 1px solid #d8d8d8;
+    text-align: left;
+}
+
+
+
+/* End style for ul list on right side of page sidebar */
+
+
+
+.card-h-two-centered {  /* centers h2 tag  */
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+
+/* Start style for  footer in the white cards */ 
+.card-footer {           
+  background: var(--authenticTeal);
+  padding: 5px 10px;
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+}
+
+.text-footer-color {    /* this is text in footer in the white cards */ 
+  color: #fff;
+}
+/* End style for  footer in the white cards */
+
+
+/*
+==========
+End style for grid main and side
+==========
+*/
+
+/* Start style for top of website small while 1400 area with 1 paragraph and h1 tag */ 
+.top-text-and-title-area {
+  background: var(--primaryColor);
+  padding: 0px 20px;
+  justify-items: center;
+  max-width: 1400px;
+  margin: 10px auto 0px auto; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+/* End style for top of website small while 1400 area with 1 paragraph and h1 tag */ 
+
+
+/* Start style for top of website small while 1400 area with 1 paragraph and h1 tag */ 
+.top-text-and-title-area-privacy {
+  background: var(--primaryColor);
+  padding: 0px 20px;
+  justify-items: left;
+  max-width: 1400px;
+  margin: 10px auto 0px auto; 
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+}
+/* End style for top of website small while 1400 area with 1 paragraph and h1 tag */ 
+
+
+
+
+
+
+/*
+==========
+Start styles for home page small image gallery
+==========
+*/
+/* START IMAGE GALLERY WORKS PERFECTLY */
+.image-grid {
+  --gap: 16px;
+  --num-cols: 4;
+  --row-height: 300px;
+
+  box-sizing: border-box;
+  padding: var(--gap);
+  max-width: 1400px;
+  margin: 0 auto;  /* The "0 auto" rule centers the block */
+    background: #fff;
+      box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+        border-radius: 8px;
+ 
+
+  display: grid;
+  grid-template-columns: repeat(var(--num-cols), 1fr);
+  grid-auto-rows: var(--row-height);
+  gap: var(--gap);
+}
+
+.image-grid > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.image-grid-col-2 {
+  grid-column: span 2;
+}
+
+.image-grid-row-2 {
+  grid-row: span 2;
+}
+
+@media screen and (max-width: 1024px) {      /* for screens under 1024px */
+  .image-grid {
+   --num-cols: 2;
+   --row-height: 200px;
+  }
+}
+/* END IMAGE GALLERY WORKS PERFECTLY */
+/*
+==========
+End styles for home page small image gallery
+==========
+*/
+
+
+ /* Start styles for list side by side in big white card */
+.center-container-text {
+  text-align: center;
+}
+
+.list-prague-old-town-container {
+  display: flex;         /* Arranges children in a row */
+  gap: 40px;             /* Adds space between the lists */
+  justify-content: center;  /* Centers list on page */
+}
+ /* End styles for list side by side in big white card */
+
+ /* Start footer styles */
+ .page-bottom-footer-area {
+  background: var(--authenticTeal);
+  padding: 0px 10px;
+  color: #fff;
+  justify-items: center;
+  max-width: 1400px;
+  margin: 10px auto 0px auto; 
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16);
+ }
+ /* End footer styles */
+
+/*
+==========
+Start styles for nav bar top of page
+==========
+*/
+/* Start navbar is part of header for sticky to work  justify change center so links centered */
+.navbar {
+  display: flex;
+  justify-content: center;
+  max-width: 1400px;
+  margin: 0 auto;  /* The "0 auto" rule centers the block */
+  align-items: center;
+  background-color: var(--authenticTeal);
+  padding: 15px 30px;
+  position: sticky; /* Keeps navbar at the top while scrolling */
+  top: 0;
+  z-index: 1000;
+}
+/* End navbar is part of header for sticky to work  justify change center so links centered */
+
+/* List container handling link alignments */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: center; /* Horizontally centers your menu items */
+  flex-grow: 1;            /* Allows the list to fill up the middle section */
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 30px;               /* Defines modern spacing between links */
+}
+
+
+/* Start individual text link style and transition */
+.nav-links a {
+  color: #f2f2f2;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 8px 12px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  border-radius: 4px;
+}
+/* Start individual text link style and transition */
+
+/* Start hover effect */
+.nav-links a:hover, 
+.nav-links a.active {
+  background-color: #04AA6D; /* Highlight color */
+  color: #fff;
+}
+/* End hover effect */
+
+/*
+==========
+End styles for nav bar top of page
+==========
+*/
+
+
+/* EVERYTHING ABOVE IS PERFECT */
+
+
+
+
+
+/* Form Styles */
+
+form {
+    background-color: #ECECEC;
+    padding: 30px 40px;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="tel"],
+input[type="email"] {
+    width: 100%;
+    display: block;
+    box-sizing: border-box;
+    padding: 0 10px;
+    height: 40px;
+} 
+
+#yourMessage {
+  width: 100%;
+  box-sizing: border-box; /* Ensures padding doesn't cause overflow */
+  padding: 10px;          /* Optional: adds space inside */
+}
+
+/* End Form Styles */
