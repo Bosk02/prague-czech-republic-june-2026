@@ -57,6 +57,7 @@ a {
 
 .footer-words {
   color: #fcfcfc; /* Changes the link color to orange */
+  gap: 40px;
 }
 
 
