@@ -52,6 +52,12 @@ p {
 a {
   text-decoration: none;
 }
+
+.standard-link {
+    color: #0077B6; /* Changes text to an orange hex color */
+    text-decoration: none; /* Optional: Removes the default underline */
+    font-weight: bold;
+}
 /* End Link styles */
 
 
